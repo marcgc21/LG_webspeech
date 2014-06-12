@@ -3,11 +3,12 @@
   padding: 0;
 }
 body {
-  background-color: black;
+  background-color: white;
   color: white;
   font-family: arial, sans-serif;
   font-size: 110%;
-  margin: 0;
+  margin: 0 auto;
+	width:90%;
   overflow: hidden;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -26,9 +27,9 @@ body {
   -webkit-transition: opacity .5s linear .5s;
 }
 .touchscreen {
-  margin: 80 auto;
+  margin-top:20px;
   text-align: center;
-  width: 90%;
+  
 }
 .welcome {
   background-color: #808080;
@@ -37,16 +38,21 @@ body {
   padding: 5px;
   position: absolute;
   text-align: center;
-  top: 50%;
+
   width: 40%;
   -webkit-border-radius: 5px;
 }
 .earth>img, .moon>img, .mars>img, .keyboard>img, .layers>img {
-  height: 220px;
-  width: 220px;
+  height: 200px;
+  width: 200px;
   -webkit-transform: scale(1.0);
   -webkit-transition-duration: .5s;
 }
+
+.voicesearch{
+margin-top:50px;
+}
+
 .appctl>img {
   top: 0px;
   height: 64px;
@@ -101,31 +107,46 @@ body {
   -webkit-transition: opacity .5s linear;
 }
 .expand {
-  background-color: #C2DFFF;
+  background-color: #FFFFFF;
   left: 10%;
   opacity: 0;
   padding: 6 0 6 0;
   position: absolute;
   text-align: center;
-  top: 370px;
+  top: 300px;
   width: 80%;
   z-index: -1;
   -webkit-border-radius: 5px;
   -webkit-transition: z-index 0s linear .5s, opacity .5s linear;
 }
 .expand_active {
-  background-color: #C2DFFF;
+  background-color: #FFFFFF;
   left: 10%;
   padding: 6 0 6 0;
   position: absolute;
   text-align: center;
-  top: 370px;
+  top: 300px;
   width: 80%;
   opacity: 1;
   z-index: 1; 
   -webkit-border-radius: 5px;
   -webkit-transition: z-index 0s linear .5s, opacity .5s linear;
 }
+
+#e_keyboard {
+  background-color: #FFFFFF;
+  left: 10%;
+  padding: 6 0 6 0;
+  position: absolute;
+  text-align: center;
+  top: 250px;
+  width: 80%;
+  opacity: 1;
+  z-index: 1; 
+  -webkit-border-radius: 5px;
+  -webkit-transition: z-index 0s linear .5s, opacity .5s linear;
+}
+
 .expand_inactive {
   background-color: #C2DFFF;
   left: 10%;
@@ -141,8 +162,8 @@ body {
 }
 .earth, .moon, .mars, .keyboard, .layers {
   display: inline-table;
-  height: 240px;
-  width: 240px;
+  height: 200px;
+  width: 200px;
 }
 .appctl {
   display: inline-table;

@@ -72,10 +72,13 @@ $existing_kml_url_list = array_values(getKmlListUrls($kml_data_file));
   </head>
   <body onload="noneExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');">
     <div class="touchscreen">
+<div class="welcome" onclick="noneExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');">
+        Welcome to the Liquid Galaxy by Google
+      </div>
       <div id="status"></div>
       <div class="earth">
         <div class="title" onclick="changePlanet('earth');  toggleExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');">Earth</div>
-        <img onclick="changePlanet('earth');  toggleExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');" src="images/earth.png" />
+        <img onclick="changePlanet('earth');  toggleExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');" src="images/earth_w.png" />
         <div class="expand_inactive" id="e_earth">
           <?php foreach (array_values($queries['earth']) as $query) { ?>
             <div class="location" onclick="changeQuery('<?php echo $query[1]; ?>', '<?php echo $query[0]; ?>');"><?php echo $query[0]; ?></div>
@@ -84,7 +87,7 @@ $existing_kml_url_list = array_values(getKmlListUrls($kml_data_file));
       </div>
       <div class="moon">
         <div class="title" onclick="changePlanet('moon'); clearKmls(); toggleExpand('e_moon', 'e_earth', 'e_layers','e_mars', 'e_keyboard');">Moon</div>
-        <img onclick="changePlanet('moon'); clearKmls(); toggleExpand('e_moon', 'e_earth', 'e_layers','e_mars', 'e_keyboard');" src="images/moon.png" />
+        <img onclick="changePlanet('moon'); clearKmls(); toggleExpand('e_moon', 'e_earth', 'e_layers','e_mars', 'e_keyboard');" src="images/moon_w.png" />
         <div class="expand_inactive" id="e_moon">
           <?php foreach (array_values($queries['moon']) as $query) { ?>
             <div class="location" onclick="changeQuery('<?php echo $query[1]; ?>', '<?php echo $query[0]; ?>');"><?php echo $query[0]; ?></div>
@@ -93,7 +96,7 @@ $existing_kml_url_list = array_values(getKmlListUrls($kml_data_file));
       </div>
       <div class="mars">
         <div class="title" onclick="changePlanet('mars'); clearKmls(); toggleExpand('e_mars', 'e_earth', 'e_layers','e_moon', 'e_keyboard');">Mars</div>
-        <img onclick="changePlanet('mars'); clearKmls(); toggleExpand('e_mars', 'e_earth', 'e_layers','e_moon', 'e_keyboard'); "  src="images/mars.png" />
+        <img onclick="changePlanet('mars'); clearKmls(); toggleExpand('e_mars', 'e_earth', 'e_layers','e_moon', 'e_keyboard'); "  src="images/mars_w.png" />
         <div class="expand_inactive" id="e_mars">
           <?php foreach (array_values($queries['mars']) as $query) { ?>
             <div class="location" onclick="changeQuery('<?php echo $query[1]; ?>', '<?php echo $query[0]; ?>');"><?php echo $query[0]; ?></div>
@@ -109,6 +112,8 @@ $existing_kml_url_list = array_values(getKmlListUrls($kml_data_file));
           <?php ++$i; } ?>
         </div>
       </div>
+	<p>
+</p>
 	<div class="voicesearch">
 
 	<form action="index.php" method="post">
@@ -155,9 +160,7 @@ $existing_kml_url_list = array_values(getKmlListUrls($kml_data_file));
           </div>
         </div>
       </div>
-      <div class="welcome" onclick="noneExpand('e_earth', 'e_layers', 'e_moon', 'e_mars', 'e_keyboard');">
-        Welcome to the Liquid Galaxy by Google
-      </div>
+      
       <!--//
       <div class="ctlpanel">
         <div class="appctl">
